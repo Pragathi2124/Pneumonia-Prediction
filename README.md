@@ -18,15 +18,21 @@ The data is split into training and testing sets, located in separate directorie
 **🛠️ Methodology**
 The project follows a structured approach to build the prediction model:
 **1.Data Loading**: File paths and labels for the train and test images were loaded into Pandas DataFrames for easy management.
+
 **2.Data Augmentation**: To prevent overfitting and improve the model's ability to generalize, the training images were augmented using ImageDataGenerator. Transformations included rotation, shifts, shear, zoom, and horizontal flips.
+
 **3.CNN Architecture Design**: A flexible CNN architecture was defined with tunable hyperparameters for:
 Number of filters in convolutional layers.
 Kernel sizes.
 Activation functions.
 Number of units in dense layers.
+
 **4.Hyperparameter Tuning**: Keras Tuner's RandomSearch was employed to automatically find the best combination of hyperparameters, optimizing for accuracy over 5 trials.
+
 **5.Model Training**: The best model architecture identified by the tuner was trained for an additional 10 epochs to ensure optimal performance.
+
 **6.Evaluation**: The model's performance was evaluated on the unseen test dataset using accuracy, a confusion matrix, and a detailed classification report (precision, recall, F1-score).
+
 **7.Validation:** The model was further validated by making predictions on randomly selected images from the test set to provide a qualitative assessment of its performance.
 
 ### 🚀 Technologies Used
